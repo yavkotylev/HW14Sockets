@@ -1,7 +1,4 @@
-import java.io.ByteArrayOutputStream;
 import java.io.ObjectInputStream;
-import java.io.ObjectOutput;
-import java.io.ObjectOutputStream;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.net.Socket;
@@ -21,7 +18,6 @@ public class ClientInvocationHandler implements InvocationHandler {
     }
 
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-
         Socket socket = new Socket(host, port);
         socket.getOutputStream().write(SerializationUtils.serialize
                 (new SerializationRequestImpl(args, method)));

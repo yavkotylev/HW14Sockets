@@ -1,11 +1,9 @@
-
-
 import java.lang.reflect.Method;
 
 /**
  * Created by Yaroslav on 10.09.16.
  */
-public class SerializationRequestImpl implements SerializationRequest{
+public class SerializationRequestImpl implements SerializationRequest {
     private final String methodName;
     private final Object[] args;
 

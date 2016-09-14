@@ -7,7 +7,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class ServerRegistration {
-    public void listen(String host, int port, Object impl) {
+    public void listen(int port, Object impl) {
         try {
             ServerSocket serverSocket = new ServerSocket(port);
             while (true) {

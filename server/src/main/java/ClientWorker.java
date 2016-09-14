@@ -18,7 +18,6 @@ class ClientWorker implements Runnable {
         implementation = impl;
     }
 
-
     public void run() {
         SerializationRequest request = getClientRequest();
         for (Method method : implementation.getClass().getMethods()) {
@@ -61,5 +60,4 @@ class ClientWorker implements Runnable {
         System.arraycopy(b, 0, reqByte, 0, count);
         return (SerializationRequestImpl) SerializationUtils.deserialize(reqByte);
     }
-
 }

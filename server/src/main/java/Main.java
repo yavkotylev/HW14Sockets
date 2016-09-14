@@ -6,7 +6,6 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) throws IOException {
         ServerRegistration server = new ServerRegistration();
-
-        server.listen("localhost", 5000, new CalculatorImpl());
+        server.listen(5000, new CalculatorImpl());
     }
 }
